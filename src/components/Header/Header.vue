@@ -1,9 +1,22 @@
 <template>
-  <div class="header-container">标题</div>
+  <div class="header-container">{{ titleAs }}</div>
 </template>
 
 <script>
-export default {}
+export default {
+  props: {
+    title: {
+      type: String,
+      default: "购物车",
+      required : true
+    },
+  },
+  data() {
+    return {
+      titleAs: this.title,
+    };
+  },
+};
 </script>
 
 <style lang="less" scoped>
